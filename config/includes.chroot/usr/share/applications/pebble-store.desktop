@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Pebble Store
+Comment=Simple app installer listing extra apps
+Exec=pebble-store
+Icon=system-software-install
+Terminal=false
+Categories=System;PackageManager;
+StartupNotify=true

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Pebble Files
+Comment=Browse and manage files
+Exec=thunar %U
+Icon=system-file-manager
+Terminal=false
+Categories=System;FileTools;FileManager;
+StartupNotify=true
+MimeType=inode/directory;
+Actions=open-home;open-trash;

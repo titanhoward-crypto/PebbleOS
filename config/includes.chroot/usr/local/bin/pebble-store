@@ -1,0 +1,30 @@
+#!/bin/bash
+# Simple Pebble Store – lists a few extra packages that can be installed
+# with apt (requires network). For demonstration only.
+
+ZENITY=$(command -v zenity || command -v yad || true)
+
+MSG="Pebble Store (demo)
+
+Available extra packages (install with sudo apt install <name>):
+
+  - libreoffice          Office suite
+  - gimp                 Advanced image editor
+  - inkscape             Vector graphics
+  - code / code-oss      VS Code / OSS
+  - steam-installer      Steam (non-free)
+  - flatpak + flathub    Additional apps via Flatpak
+
+To install Flatpak support (already partially present):
+  sudo apt update
+  sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+This is a simple demonstration. A full graphical store can be added later
+(e.g. gnome-software or a custom Python UI)."
+
+if [ -n "$ZENITY" ]; then
+  $ZENITY --info --title="Pebble Store" --width=450 --text="$MSG" 2>/dev/null || echo "$MSG"
+else
+  echo "$MSG"
+  read -p "Press Enter to close..."
+fi

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Pebble Photos
+Comment=Image viewer with slideshow
+Exec=ristretto %U
+Icon=image-viewer
+Terminal=false
+Categories=Graphics;Viewer;
+StartupNotify=true

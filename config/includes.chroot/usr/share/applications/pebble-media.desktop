@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Pebble Media
+Comment=Music and video player
+Exec=vlc %U
+Icon=multimedia-video-player
+Terminal=false
+Categories=AudioVideo;Player;
+StartupNotify=true

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Pebble Minesweeper
+Comment=Classic Minesweeper
+Exec=gnome-mines
+Icon=gnome-mines
+Terminal=false
+Categories=Game;LogicGame;
+StartupNotify=true

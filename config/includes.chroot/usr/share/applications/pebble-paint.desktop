@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Pebble Paint
+Comment=Simple drawing app – brushes, colors, save as PNG
+Exec=pinta %F
+Icon=applications-graphics
+Terminal=false
+Categories=Graphics;
+StartupNotify=true

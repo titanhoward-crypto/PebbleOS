@@ -1,0 +1,35 @@
+#!/bin/sh
+# Apply additional Pebble branding inside the chroot
+set -e
+
+# Ensure wallpaper directory exists
+mkdir -p /usr/share/backgrounds/pebbleos
+
+# If no custom wallpaper was provided, create a simple solid one with ImageMagick if available,
+# otherwise leave a note. (User should supply assets/wallpapers/default.jpg)
+if [ ! -f /usr/share/backgrounds/pebbleos/default.jpg ]; then
+  if command -v convert >/dev/null 2>&1; then
+    convert -size 1920x1080 gradient:'#2c3e50-#3498db' /usr/share/backgrounds/pebbleos/default.jpg || true
+  else
+    # Fallback: empty file so paths do not break; replace later
+    touch /usr/share/backgrounds/pebbleos/default.jpg
+  fi
+fi
+
+# Make sure our local binaries are executable
+chmod +x /usr/local/bin/* 2>/dev/null || true
+
+# Update desktop database so custom .desktop files appear
+if command -v update-desktop-database >/dev/null 2>&1; then
+  update-desktop-database /usr/share/applications || true
+fi
+
+# Set a friendly motd
+cat > /etc/motd << 'EOF'
+Welcome to PebbleOS
+
+  Username : pebble
+  Password : pebble
+
+  Enjoy the desktop!
+EOF

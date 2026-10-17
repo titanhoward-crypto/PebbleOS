@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Pebble Task Manager
+Comment=Running apps, CPU/RAM usage, end task
+Exec=xfce4-taskmanager
+Icon=utilities-system-monitor
+Terminal=false
+Categories=System;Monitor;
+StartupNotify=true

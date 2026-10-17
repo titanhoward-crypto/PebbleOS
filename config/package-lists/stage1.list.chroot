@@ -1,0 +1,54 @@
+# Stage 1 – boot to graphical desktop
+# Core live + X + LightDM + minimal XFCE
+
+live-boot
+live-config
+live-config-systemd
+systemd-sysv
+sudo
+user-setup
+locales
+keyboard-configuration
+console-setup
+
+# Firmware & kernel helpers
+firmware-linux
+firmware-linux-nonfree
+firmware-misc-nonfree
+linux-image-amd64
+
+# Xorg + display manager
+xorg
+xserver-xorg
+xserver-xorg-input-all
+xserver-xorg-video-all
+lightdm
+lightdm-gtk-greeter
+lightdm-gtk-greeter-settings
+
+# Minimal XFCE
+xfce4
+xfce4-session
+xfce4-panel
+xfce4-settings
+xfce4-terminal
+xfdesktop
+xfwm4
+thunar
+mousepad
+network-manager
+network-manager-gnome
+pulseaudio
+pavucontrol
+dbus-x11
+
+# Basic utilities
+bash-completion
+nano
+less
+htop
+curl
+wget
+ca-certificates
+gnupg
+apt-transport-https

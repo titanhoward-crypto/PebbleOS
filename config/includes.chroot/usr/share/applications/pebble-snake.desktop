@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Pebble Snake
+Comment=Classic Snake game
+Exec=pebble-snake
+Icon=applications-games
+Terminal=false
+Categories=Game;ArcadeGame;
+StartupNotify=true

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Pebble Notes
+Comment=Simple text editor with basic formatting
+Exec=mousepad %F
+Icon=accessories-text-editor
+Terminal=false
+Categories=Utility;TextEditor;
+StartupNotify=true
+MimeType=text/plain;

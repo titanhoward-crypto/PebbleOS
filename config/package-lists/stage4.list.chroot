@@ -1,0 +1,135 @@
+# Stage 4 – full PebbleOS package set
+
+live-boot
+live-config
+live-config-systemd
+systemd-sysv
+sudo
+user-setup
+locales
+keyboard-configuration
+console-setup
+firmware-linux
+firmware-linux-nonfree
+firmware-misc-nonfree
+linux-image-amd64
+xorg
+xserver-xorg
+xserver-xorg-input-all
+xserver-xorg-video-all
+lightdm
+lightdm-gtk-greeter
+lightdm-gtk-greeter-settings
+xfce4
+xfce4-session
+xfce4-panel
+xfce4-settings
+xfce4-terminal
+xfdesktop
+xfwm4
+thunar
+mousepad
+network-manager
+network-manager-gnome
+pulseaudio
+pavucontrol
+dbus-x11
+bash-completion
+nano
+less
+htop
+curl
+wget
+ca-certificates
+gnupg
+apt-transport-https
+xfce4-whiskermenu-plugin
+xfce4-goodies
+xfce4-power-manager
+xfce4-screenshooter
+xfce4-taskmanager
+xfce4-notifyd
+xfce4-clipman-plugin
+xfce4-indicator-plugin
+xfce4-statusnotifier-plugin
+xfce4-pulseaudio-plugin
+xfce4-datetime-plugin
+xfce4-battery-plugin
+light-locker
+xscreensaver
+arc-theme
+papirus-icon-theme
+elementary-xfce-icon-theme
+fonts-liberation
+fonts-noto
+fonts-dejavu
+plymouth
+plymouth-themes
+virtualbox-guest-x11
+virtualbox-guest-utils
+open-vm-tools
+open-vm-tools-desktop
+thunar-archive-plugin
+thunar-media-tags-plugin
+tumbler
+ffmpegthumbnailer
+file-roller
+gvfs
+gvfs-backends
+gvfs-fuse
+udisks2
+policykit-1
+policykit-1-gnome
+accountsservice
+
+# Browser
+firefox-esr
+
+# Calculator
+gnome-calculator
+# or galculator if preferred
+
+# Paint / drawing
+pinta
+# alternative: kolourpaint or simple python app
+
+# Media player
+vlc
+mpv
+
+# Image viewer
+ristretto
+# or eog
+
+# Calendar
+orage
+# or gnome-calendar
+
+# Games
+gnome-mines
+aisleriot
+# Snake will be a simple custom script or python-pygame if available
+
+# Extra utilities
+galculator
+gparted
+synaptic
+flatpak
+gnome-software
+# or discover if KDE pieces wanted
+
+# Python for simple custom apps / Snake
+python3
+python3-tk
+python3-pil
+python3-pil.imagetk
+
+# Optional but useful
+rsync
+zip
+unzip
+p7zip-full
+git
+neofetch
+figlet
+cowsay

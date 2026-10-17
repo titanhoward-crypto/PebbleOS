@@ -1,0 +1,35 @@
+#!/bin/sh
+# Create the default Pebble user and set passwords
+set -e
+
+# live-config will create the user from bootappend-live (username=pebble)
+# Here we just ensure password and groups are sensible for a live session.
+
+if id pebble >/dev/null 2>&1; then
+  echo "pebble:pebble" | chpasswd
+  usermod -aG sudo,audio,video,plugdev,netdev,cdrom pebble || true
+else
+  # Fallback if live-config has not run yet
+  useradd -m -s /bin/bash -G sudo,audio,video,plugdev,netdev,cdrom -c "Pebble User" pebble || true
+  echo "pebble:pebble" | chpasswd
+fi
+
+# Root password (for emergency)
+echo "root:pebble" | chpasswd
+
+# Allow passwordless sudo for the live user (common for live systems)
+if [ -d /etc/sudoers.d ]; then
+  echo "pebble ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/pebble
+  chmod 0440 /etc/sudoers.d/pebble
+fi
+
+# Set hostname
+echo "pebbleos" > /etc/hostname
+echo "127.0.1.1 pebbleos" >> /etc/hosts || true
+
+# Enable NetworkManager
+systemctl enable NetworkManager || true
+
+# Enable LightDM
+systemctl enable lightdm || true
+systemctl set-default graphical.target || true

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Pebble Solitaire
+Comment=Classic Solitaire (Klondike)
+Exec=sol
+Icon=aisleriot
+Terminal=false
+Categories=Game;CardGame;
+StartupNotify=true

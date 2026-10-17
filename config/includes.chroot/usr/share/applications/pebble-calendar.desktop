@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Pebble Calendar
+Comment=Calendar, alarms, timer, stopwatch
+Exec=orage
+Icon=x-office-calendar
+Terminal=false
+Categories=Office;Calendar;
+StartupNotify=true
